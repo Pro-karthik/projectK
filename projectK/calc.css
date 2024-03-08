@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+body{
+   background-color: black;
+   display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator{
+  display: grid;
+  position: relative;
+  place-items: center;
+  background-color: #212121;
+  height: 550px;
+  width: 350px;
+  overflow:hidden;
+  border-radius: 10px;
+}
+.bahar{
+  z-index: 2;
+}
+
+.calculator::before{
+  content: "";
+  position: absolute;
+  height: 180%;
+  width: 80px;
+  background-color: aliceblue;
+  transform: rotate(45deg);
+  filter: hue-rotate(350deg);
+  animation: wow 2s linear infinite;
+}
+
+@keyframes wow {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+} 
+}
+
+.calculator::after{
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background-color:#212121 ;
+  border-radius: 10px;
+}
+
+.display{
+  text-align: right;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+  font-size: 2em;
+  display: flex;
+  justify-content: end;
+  background-color: hsl(0, 0%, 17%);
+  border-radius: 40px;
+  padding-right: 19px;
+  width: 295px;
+  height:50px ;
+  color: #ffffff;
+  margin-left:10px ;
+  border: none;
+
+}
+
+.each-button{
+  font-weight: 500;
+  font-size: 1em;
+  height: 55px;
+  width: 55px;
+  border: none;
+  margin: 5px;
+  border-radius: 40%;
+  color: #ffffff;
+  background-color:hsl(0, 0%, 30%) ;
+  box-shadow: 0 0 10px black;
+  
+}
+
+.each-button:hover{
+  background-color:hsl(0, 0%, 50%) ;
+
+}
+
+.each-button:active{
+  border: none;
+  background-color:hsl(0, 0%, 10%);
+  border-color: none;
+  border-width: 0;
+  outline: none;
+}
+.ext{
+  width: 45%;
+  border-radius:20px;
+}
+
+.sp-btn{
+  background-color: hsl(9, 100%, 64%);
+}
+.sp-btn:hover{
+  background-color: hsl(9, 100%, 50%);
+}
