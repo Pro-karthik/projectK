@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.main-cont{
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  background-color:  black;
+}
+
+.clock-cont{
+  position: relative;
+  
+}
+
+.clock-cont::before{
+  content: "";
+  height: 302px;
+  width: 302px;
+  border-radius: 50%;
+  background-color:#f01919;
+  position: absolute;
+  margin: 0;
+  animation: lol 2s linear infinite ;
+}
+
+@keyframes lol{
+  50%{
+    filter: hue-rotate(350deg);
+  }
+}
+
+
+.clock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color:#212121;
+}
+
+
+
+.clock span{
+  position: absolute;
+  transform: rotate(calc(30deg * var(--i)));
+  inset: 10px;
+  text-align: center;
+}
+
+.clock span b{
+  transform: rotate(calc(-30deg * var(--i)));
+  display: inline-block;
+}
+
+.clock::before{
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.hand{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hand i{
+  position: absolute;
+  width: 4px;
+  background-color: var(--voo);
+  height: var(--h);
+  border-radius: 8px;
+}
