@@ -1,0 +1,106 @@
+
+body{
+  background-color: black;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  
+  margin: 10px;
+}
+
+.mainText{
+  background: linear-gradient(94deg, rgba(131,58,180,1) 0%, rgba(250,29,253,1) 0%, rgba(250,37,243,1) 14%, rgba(250,50,227,1) 37%, rgba(252,176,69,1) 66%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+}
+
+.inputTodo{
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  
+}
+
+.bahar{
+  z-index: 2;
+  color: #fff;
+}
+
+.eachLi{
+  display: grid;
+  position: relative;
+  justify-content: center;
+  place-items:center;
+  background-color: #212121;
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+  height: 70px;
+  width: 100%;
+  margin-left: 10px;
+  overflow: hidden;
+ 
+}
+
+.eachLi::before{
+  position: absolute;
+  content: "";
+  height: 300vh;
+  width: 50px;
+  background: linear-gradient(94deg, rgba(131,58,180,1) 0%, rgba(250,29,253,1) 0%, rgba(250,37,243,1) 14%, rgba(250,50,227,1) 37%, rgba(252,176,69,1) 66%);
+  animation: ok 3s linear infinite;
+}
+
+@keyframes ok {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.eachLi::after{
+  position: absolute;
+  content: "";
+  background-color: #212121;
+  inset: 5px;
+}
+
+.addBtn{
+  color: #fff;
+  background: linear-gradient(94deg, rgba(131,58,180,1) 0%, rgba(252,176,69,1) 0%, rgba(252,176,69,1) 32%, rgba(250,50,227,1) 60%, rgba(250,37,243,1) 66%);
+  border: 0;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+  font-weight: 500;
+  transition:all 0.5s ease;
+}
+.addBtn:hover{
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  width: 100px;
+  height: 50px;
+}
+
+.delete-icon-container {
+  text-align: right;
+  width: 18%;
+  
+}
+
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.checkbox-label{
+  font-weight: 500;
+  font-size: 20px;
+}
