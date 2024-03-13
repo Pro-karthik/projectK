@@ -1,0 +1,123 @@
+.skillsCont{
+  background-color: black;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+
+}
+
+.contEl{
+  margin-left: 20px;
+}
+
+.myski_head{
+  color: white;
+  font-weight: bold;
+}
+
+.mainHeadStyle{
+  background: linear-gradient(94deg, rgba(131,58,180,1) 0%, rgba(250,29,253,1) 0%, rgba(250,37,243,1) 14%, rgba(250,50,227,1) 37%, rgba(252,176,69,1) 66%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contSymb{
+  font-size: 25px;
+}
+
+.Skname{
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.bar{
+  position: relative;
+  height: 6px;
+  width:90%;
+  background-color: #212121;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  transform: scaleX(0);
+  animation: lol 2s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform-origin: left;
+}
+
+@keyframes lol {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar span{
+  position: absolute;
+  content:"";
+  height: 100%;
+  background: linear-gradient(94deg, rgba(131,58,180,1) 0%, rgba(250,29,253,1) 0%, rgba(250,37,243,1) 14%, rgba(250,50,227,1) 37%, rgba(252,176,69,1) 66%);
+  animation: lol 2s cubic-bezier(1, 0, 0.5, 1) forwards;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.html span{
+  width: 95%;
+}
+
+.css span{
+  width: 90%;
+}
+
+.js span{
+  width: 50%;
+}
+
+.bs span{
+  width: 70%;
+}
+
+.py span{
+  width: 99%;
+}
+
+.bar span::after{
+  position: absolute;
+  background-color: black;
+  color: aliceblue;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 3px;
+  top: -39px;
+  right: -29px;
+  border-radius: 2px;
+  animation: show 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+.bar.html span::after{
+  content: "95%";
+}
+
+.bar.css span::after{
+  content: "90%";
+}
+
+.bar.js span::after{
+  content: "50%";
+}
+
+.bar.bs span::after{
+  content: "70%";
+}
+
+.bar.py span::after{
+  content: "99%";
+}
+
+@keyframes show {
+  100%{
+    opacity: 1;
+  }
+}
+
+
